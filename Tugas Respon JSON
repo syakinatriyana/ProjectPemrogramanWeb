@@ -1,0 +1,113 @@
+Respon dengan format JSON berdasarkan menu yang akan dibuat
+
+1.Menu login 
+{
+	"email": user_email,
+	"password": user_password
+}
+
+2.Menu Register
+{
+	"fullname": user_fullname,
+	“instance”: user_instance,
+	"email ": user_email,
+	"username": user_username,
+	"password": user_password
+}
+
+3.Menu Profil
+{
+	"fullname": user_fullname,
+	"email": user_email,
+	“phone”: user_phone
+	“gender”: user_gender
+	“dob”: user_dob
+	“instance”: user_instance,
+	“signature”: ”user_signature.png”
+}
+
+4.Menu edit profil
+{
+	"fullname": user_fullname,
+	“photo”: “user_photo.jpg”
+	"email": user_email,
+	“phone”: user_phone
+	“gender”: user_gender
+	“dob”: user_dob
+	“instance”: user_instance,
+	“signature”: ”user_signature.png”
+}
+
+5.Menu Upload & Sign
+{
+	"file": 	{
+			"filename": "document.pdf",
+			"size": size,
+		}
+	“signature”: ”user_signature.png”
+	“share”: recipient_email
+}
+
+6.Menu Upload & Request
+{
+	"file": 	
+		{
+			"filename": "document.pdf",
+			"size": size,
+		}
+	“request”:
+		{
+			“page”: page_to_sign,
+			“sign_req”: recipient_email
+		}
+}
+
+7.Menu Sign & Request
+{
+	"file": 	
+		{
+			"filename": "document.pdf",
+			"size": size,
+		}
+	“signature”: ”user_signature.png”
+	“request”:
+		{
+			“page”: page_to_sign,
+			“sign_req”: recipient_email
+		}
+}
+
+8.Generate Surat (Create)
+{
+	"data surat": 
+		{
+			"id": id_surat,
+			"nomor_surat": no_surat,
+			"tanggal_surat": tgl_surat,
+			"perihal": hal_surat,
+			"pengirim": sender_name
+			"penerima": recipient_name
+		}
+}
+
+9.Document Management
+{
+	"data surat": 
+		[{
+			"id": id_surat,
+			"nomor_surat": no_surat,
+			"tanggal_surat": tgl_surat,
+			"perihal": hal_surat,
+			"pengirim": sender_name
+			"penerima": recipient_name
+			“status”: status
+		},
+		{
+			"id": id_surat,
+			"filename": "document.pdf",
+			"tanggal_upload": tgl_upload,
+			"pengirim": sender_name
+			"penerima": recipient_name
+			“status”: status
+		}]
+}
